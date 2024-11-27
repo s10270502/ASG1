@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="message-link">
+            <a href="https://wa.me/6596505964" target="_blank" rel="noopener noreferrer">
+                <button>
+                    <img src="Images/call_icon.png" alt="Call Icon">
+                </button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Hamburger Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="carousel">
+            <button class="carousel-arrow left" id="prevArrow">&lt;</button>
+            <div class="carousel-content">
+                <!-- Carousel Item 1 -->
+                <div class="carousel-item active">
+                    <div class="carousel-image">
+                        <img src="Images/conference_img.jpg" alt="Carousel Image 1">
+                    </div>
+                    <h1>WELCOME</h1>
+                    <p class="description">Description for Image 1...</p>
+                    <button class="cta-btn">BUTTON</button>
+                </div>
+                
+                <!-- Carousel Item 2 -->
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="Images/chanel_front.jpg" alt="Carousel Image 2">
+                    </div>
+                    <p class="description">Description for Image 2...</p>
+                    <button class="cta-btn">BUTTON</button>
+                </div>
+                
+                <!-- Carousel Item 3 -->
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="Images/chanel_inside.jpg" alt="Carousel Image 3">
+                    </div>
+                    <p class="description">Description for Image 3...</p>
+                    <button class="cta-btn">BUTTON</button>
+                </div>
+            </div>
+            <button class="carousel-arrow right" id="nextArrow">&gt;</button>
+        </div>
+    </section>
+
+    <!-- Section Header -->
+    <section class="section-header">
+        <h2>Section Header</h2>
+        <div class="clients-dropdown-container">
+            <button class="clients-dropdown">
+                Industry <span class="dropdown-icon"></span>
+            </button>
+    
+            <!-- Dropdown Menu -->
+            <div class="clients-dropdown-menu">
+                <ul>
+                    <li data-industry="All">All</li>
+                    <li data-industry="Luxury">Luxury</li>
+                    <li data-industry="Conferences">Conferences</li>
+                    <li data-industry="Automotive">Automotive</li>
+                    <li data-industry="Technology">Technology</li>
+                    <li data-industry="F&B">F&B</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Client Logo Section -->
+    <section class="clients">
+        <div class="client-grid">
+            <!-- Replace 'Client Logo' placeholders with actual image elements -->
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/Chanel_logo.jpg" alt="Chanel_Luxury"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/LV_logo.jpg" alt="LV_Luxury"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/Valentino_Logo.jpg" alt="Valentino_Luxury"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/RX_logo.jpg" alt="RX_Conferences"></div>
+                <p>Description...</p>
+            </div>
+            <!-- Logos 5-8 are hidden on mobile -->
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/Ferrari_logo.jpg" alt="Ferrari_Automotive"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/Giorgio_Armani_Logo.png" alt="GiorgioArmani_Luxury"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/Google_logo.png" alt="Google_Technology"></div>
+                <p>Description...</p>
+            </div>
+            <div class="client-item">
+                <div class="client-logo"><img src="Images/CeLaVi_logo.jpg" alt="CeLaVi_F&B"></div>
+                <p>Description...</p>
+            </div>
+        </div>
+        <button class="portfolio-btn">Portfolio Button</button>
+    </section>
+
+    <footer class="footer">
+        <h2 class="footer-header">Reach Out To Us</h2>
+        <div class="footer-map">
+            <!-- Insert interactive Google Map -->
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.23726090476!2d103.84014516137069!3d1.2885963815488588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da190a00eaf425%3A0xcdadedb823d40d93!2sSingapore%20178880!5e0!3m2!1sen!2ssg!4v1732612550308!5m2!1sen!2ssg"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+        <div class="footer-content">
+            <!-- Address Section -->
+            <div class="footer-address">
+                <p>XYZ ROAD</p>
+                <p>UNIT NO.</p>
+                <p>POSTAL CODE</p>
+                <p>OPERATING HRS</p>
+                <a href="https://wa.me/6596505964" target="_blank">+65 9650 5964</a>
+            </div>
+
+            <!-- Get a Quotation Button -->
+            <div class="footer-quotation">
+                <button class="quotation-btn">Get A Quotation</button>
+            </div>
+
+            <!-- Social Media Section -->
+            <div class="footer-socials">
+                <div class="social">
+                    <div class="social-icon">
+                        <!-- Placeholder for Instagram Icon -->
+                    </div>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+                <div class="social">
+                    <div class="social-icon">
+                        <!-- Placeholder for TikTok Icon -->
+                    </div>
+                    <a href="#" class="social-link">TikTok</a>
+                </div>
+                <div class="social">
+                    <div class="social-icon">
+                        <!-- Placeholder for YouTube Icon -->
+                    </div>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
