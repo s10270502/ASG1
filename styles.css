@@ -683,3 +683,98 @@ h1 {
 .portfolio-page .section-header{
   background-color: #d3d3d3;
 }
+
+
+/* Video Section START */
+.youtube-video {
+  background-color: #333333;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding: 1em;
+
+}
+
+.youtube-video iframe {
+  width: 80%; /* 80 because looks better on mobile */
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Video Section END */
+
+
+
+/* Services Section START */
+.services {
+  background-color: #333333;
+  color: rgb(255, 255, 255); /* Text color */
+  font-weight: bold;
+  text-align: center;
+  padding: 2.5em 2em;
+}
+
+.services-header {
+  margin-bottom: 2em;
+}
+
+.services-subtitle {
+  color: rgb(255, 255, 255); /* Subtitle color */
+  letter-spacing: 7px;
+  margin-bottom: 2em;
+}
+
+.services-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.services-description {
+  font-size: 1rem;
+  color: rgb(255, 255, 255);
+  line-height: 2;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 2em;
+}
+
+.service-item {
+  text-align: center;
+}
+
+.service-image-placeholder {
+  width: 150px; /* Box */
+  height: 150px;
+  background-color: #b3b3b3;
+  justify-content: center;
+  margin: 0 auto 1em; /* 1em space between image and txt */
+  overflow: hidden; /* Prevent overflow */
+}
+
+.service-image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure image covers entire box */
+}
+
+.service-item h4 { /* Diff services provided text */
+  font-size: 1rem;
+  font-weight: bold;
+  margin-top: 0.5em;
+  letter-spacing: 1.5px;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services-grid {
+      grid-template-columns: 1fr; /* Stack vertically on mobile */
+  }
+}
+
+/* Services Section END */

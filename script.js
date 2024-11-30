@@ -91,4 +91,25 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
     }
+
+
+    // VIDEO START
+    const videoSection = document.getElementById("videoSection");
+    const youtubePlayer = document.getElementById("youtubePlayer");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                // Add autoplay to the iframe's src when the section is in view
+                const src = youtubePlayer.getAttribute("src");
+                if (!src.includes("autoplay=1")) {
+                    youtubePlayer.setAttribute("src", src.replace("autoplay=0", "autoplay=1"));
+                }
+            }
+        });
+    }, {
+        threshold: 0.5 // Trigger when 50% of the video section is visible
+    });
+    observer.observe(videoSection);
+    // VIDEO END
 });
