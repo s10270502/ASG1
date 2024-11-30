@@ -115,17 +115,45 @@ header {
 .carousel-item {
   min-width: 100%;
   height: 100%;
-  display: none; /* Initially hide all items */
+  display: none;
   align-items: center;
   justify-content: center;
   position: relative;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  opacity: 0; /* Fully transparent initially */
 }
 
 .carousel-item.active {
   display: flex; /* Only display the active item */
   opacity: 1;
 }
+
+/* carousel fading START */
+.carousel-item.fadeIn {
+  animation: fadeIn 1s forwards; /* Trigger fade-in animation */
+}
+
+.carousel-item.fadeOut {
+  animation: fadeOut 1s forwards; /* Trigger fade-out animation */
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+/* carousel fading END */
 
 .carousel-image {
   position: absolute;

@@ -9,13 +9,28 @@ document.addEventListener("DOMContentLoaded", () => {
         if (carouselItems.length > 0) {
             carouselItems.forEach((item, i) => {
                 if (i === index) {
-                    item.classList.add("active");
+                    // Fade in the next carousel item
+                    item.classList.remove("fadeOut"); // Remove any existing fade-out class
+                    item.style.display = "flex"; // Ensure the item is visible
+                    item.classList.add("fadeIn", "active"); // Trigger fade-in animation
+                } else if (item.classList.contains("active")) {
+                    // Fade out the current active item
+                    item.classList.remove("fadeIn"); // Remove any existing fade-in class
+                    item.classList.add("fadeOut"); // Trigger fade-out animation
+                    setTimeout(() => {
+                        item.classList.remove("active", "fadeOut"); // Clean up classes
+                        item.style.display = "none"; // Hide the item after animation
+                    }, 1000); // Match the duration of the fadeOut animation
                 } else {
-                    item.classList.remove("active");
+                    // Ensure all other items are hidden
+                    item.style.display = "none";
+                    item.classList.remove("fadeIn", "fadeOut", "active");
                 }
             });
         }
     };
+    
+    
 
     if (prevArrow && nextArrow) {
         prevArrow.addEventListener("click", () => {
