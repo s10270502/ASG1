@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title> <!-- Updated title -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Normalize.css">
+
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">Logo
+            <img src="Images/company_logo.jpg" alt="navbar logo">
+        </div>        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li> <!-- Active class moved here -->
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="message-link">
+            <a href="https://wa.me/6596505964" target="_blank" rel="noopener noreferrer">
+                <button>
+                    <img src="Images/call_icon.png" alt="Call Icon">
+                </button>
+            </a>
+        </div>
+    </header>
+    
+    <!-- Hamburger Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="close-btn" id="closeMenu">&times;</button>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li> <!-- Active class moved here -->
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Add content for About page here -->
+
+    <footer class="footer">
+        <h2 class="footer-header">Reach Out To Us</h2>
+        <div class="footer-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.23726090476!2d103.84014516137069!3d1.2885963815488588!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da190a00eaf425%3A0xcdadedb823d40d93!2sSingapore%20178880!5e0!3m2!1sen!2ssg!4v1732612550308!5m2!1sen!2ssg"
+                width="600"
+                height="450"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-cross-origin">
+            </iframe>
+        </div>
+        <div class="footer-content">
+            <div class="footer-address">
+                <p>XYZ ROAD</p>
+                <p>UNIT NO.</p>
+                <p>POSTAL CODE</p>
+                <p>OPERATING HRS</p>
+                <a href="https://wa.me/6596505964" target="_blank">+65 9650 5964</a>
+            </div>
+            <div class="footer-quotation">
+                <a href="contact.html">
+                    <button class="quotation-btn">Get A Quotation</button>
+                </a>
+            </div>
+            <div class="footer-socials">
+                <div class="social">
+                    <div class="social-icon"></div>
+                    <a href="#" class="social-link">Instagram</a>
+                </div>
+                <div class="social">
+                    <div class="social-icon"></div>
+                    <a href="#" class="social-link">TikTok</a>
+                </div>
+                <div class="social">
+                    <div class="social-icon"></div>
+                    <a href="#" class="social-link">YouTube</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

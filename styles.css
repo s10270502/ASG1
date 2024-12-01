@@ -30,15 +30,25 @@ header {
 
 
 .logo {
-  width: 50px;
-  height: 50px;
-  background-color: #d3d3d3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  text-transform: uppercase;
+  width: 50px; /* Fixed width for the logo box */
+  height: 50px; /* Fixed height for the logo box */
+  background-color: #d3d3d3; /* Placeholder background */
+  display: flex; /* Flexbox for alignment */
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+  font-weight: bold; /* Original font styling */
+  text-transform: uppercase; /* Original text styling */
+  overflow: hidden; /* Ensures image doesn't overflow the box */
+  position: relative; /* Ensure proper positioning for children */
 }
+
+.logo img {
+  width: 100%; /* Scale the image to fit the width */
+  height: 100%; /* Scale the image to fit the height */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire box */
+  position: absolute; /* Make the image take its parent container dimensions */
+}
+
 
 .nav-links {
   list-style: none;
@@ -185,12 +195,17 @@ h1 {
 .description {
   position: absolute;
   left: 10%;
-  bottom: 20%;
+  bottom: 18%;
   max-width: 300px;
   z-index: 2;
   text-align: left;
   color: white;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.7); /* 30% transparency */
+  padding: 10px; /* Text background padding */
+  border-radius: 5px;
 }
+
 
 .cta-btn {
   position: absolute;
@@ -267,6 +282,13 @@ h1 {
   height: 100%;
 }
 
+.client-item p {
+  color: black;
+  font-weight: bold;
+  padding-top: 0.8rem;
+  padding-bottom: 1rem;
+}
+
 .client-logo {
   width: 200px; /* Fixed width */
   height: 200px; /* Fixed height */
@@ -288,12 +310,20 @@ h1 {
 
 /* Portfolio Button */
 .portfolio-btn {
+  background-color: transparent;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: 2px solid rgb(0, 0, 0);
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.portfolio-btn:hover {
   background-color: black;
   color: white;
-  padding: 10px 100px;
-  border: none;
-  cursor: pointer;
-  text-transform: uppercase;
 }
 
 /* Footer Styles */
@@ -363,6 +393,7 @@ h1 {
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  font-weight: bold;
 }
 
 .quotation-btn:hover {
@@ -778,3 +809,360 @@ h1 {
 }
 
 /* Services Section END */
+
+/* History Section START */
+.history-section {
+  background-color: #333333; /* Dark gray background */
+  color: white; /* White text */
+  padding: 4em 2em; /* Add padding around the section */
+}
+
+.history-header {
+  margin-bottom: 7em; /* Original settings retained */
+  text-align: center; /* Center the heading */
+  position: relative; /* Original settings retained */
+}
+
+.history-header h1 {
+  text-decoration: underline; /* Original settings retained */
+}
+
+.history-content {
+  display: flex; /* Side-by-side layout */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  gap: 2rem; /* Space between the two halves */
+}
+
+.history-image-placeholder,
+.history-description {
+  flex: 1; /* Each half takes equal width */
+  display: flex; /* Enable flexbox for child alignment */
+  flex-direction: column; /* Ensure vertical alignment of content */
+  align-items: center; /* Center horizontally within the half */
+  justify-content: center; /* Center vertically within the half */
+  text-align: center; /* Center the text for description */
+  max-width: 50%; /* Limit each half to 50% of the content */
+}
+
+.history-image-placeholder {
+  background-color: #b3b3b3; /* Placeholder background */
+  height: 500px; /* Fixed height */
+}
+
+.history-image-placeholder img {
+  width: 100%; /* Scale the image to fit */
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.history-description {
+  font-size: 1rem; /* Font size */
+  line-height: 1.6; /* Add line spacing for readability */
+  max-width: 90%; /* Ensure readability of long text */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+.history-content {
+    flex-direction: column; /* Stack items vertically */
+    gap: 2rem; /* Add space between stacked items */
+}
+
+.history-image-placeholder,
+.history-description {
+    max-width: 100%; /* Allow full width for mobile */
+    align-items: center; /* Center content horizontally */
+}
+
+.history-description {
+    text-align: center; /* Center-align the text */
+    font-size: 1rem; /* Match font size from services section */
+    line-height: 1.6; /* Match line height from services section */
+    padding: 0 2rem; /* Add similar padding for readability */
+}
+}
+/* History Section END */
+
+
+
+/* Countries Section START */
+.countries-section {
+  background-color: #d3d3d3;
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.countries-header {
+  margin-bottom: 2em; /* Space below header */
+}
+
+.countries-header h2 {
+  font-size: 2.5rem; /* header size */
+  font-weight: bold; /* Bold */
+  text-decoration: underline;
+  margin-bottom: 1em; /* Spacing below the header */
+  color: black;
+}
+
+.countries-grouped {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px; /* Space between flags */
+  justify-items: center; /* Center-align items in the grid */
+}
+
+.country {
+  display: flex; /* Flexbox for alignment */
+  flex-direction: column; /* Stack image and text vertically */
+  align-items: center; /* Center-align items */
+  justify-content: center; /* Center vertically */
+  width: 100%; /* Ensure full width within the grid */
+  max-width: 200px; /* Cap the maximum width for uniformity */
+  text-align: center; /* Center-align text */
+}
+
+.country img {
+  width: 100%; /* Fit the container width */
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.country-name {
+  margin-top: 10px; /* Space between image and txt */
+  font-size: 1.2rem;
+  line-height: 1.4;
+  text-decoration: underline;
+  color: black;
+  font-weight: bold;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .countries-grouped {
+      grid-template-columns: 1fr; /* Switch to single-column layout */
+      gap: 15px; /* Adjust spacing for smaller screens */
+  }
+
+  .country {
+      max-width: 100%; /* Allow full width for mobile */
+  }
+
+  .country-name {
+      font-size: 0.9rem; /* Scale text size for smaller screens */
+  }
+}
+/* Countries Section END */
+
+
+/* index.html COUNTER START */
+/* Counter Section */
+.counter-section {
+  display: flex; /* Align counters horizontally */
+  justify-content: center; /* Center items horizontally */
+  gap: 2rem; /* Add spacing between each counter container */
+  padding: 2rem; /* Add padding around the section */
+  text-align: center; /* Center-align text for counters */
+}
+
+.counter-container {
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack counter and text vertically */
+  align-items: center; /* Center-align counter and text */
+}
+
+.counter {
+  font-size: 10rem; /* Larger font size for counter values */
+  font-weight: bold;
+  color: #ffffff; /* Dark text color for counters */
+}
+
+.counter-text {
+  margin-top: 0.5rem; /* Space between counter and text */
+  font-size: 2.8rem; /* Font size for descriptive text */
+  color: #ffffff; /* Slightly lighter text color for the description */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+  .counter-section {
+    flex-direction: column; /* Stack counters vertically */
+    align-items: center; /* Center-align the stack */
+    gap: 1.5rem; /* Adjust spacing between counters */
+  }
+
+  .counter-container {
+    max-width: 90%; /* Ensure counters don't take up full width */
+  }
+
+  .counter {
+    font-size: 4rem; /* Slightly reduce font size on smaller screens */
+  }
+
+  .counter-text {
+    font-size: 2rem; /* Adjust text size for smaller screens */
+  }
+}
+
+/* index.html COUNTER END */
+
+
+/* ROLES START */
+
+/* Roles Section */
+.roles-section {
+  background-color: #d3d3d3; /* Same as countries section background color */
+  padding: 2em 2em; /* Add padding around the section */
+}
+
+.roles-container {
+  display: flex; /* Arrange boxes side by side */
+  justify-content: space-between; /* Add space between the boxes */
+  gap: 2rem; /* Add spacing between boxes */
+  max-width: 1200px; /* Limit the width of the section */
+  margin: 0 auto; /* Center the section */
+}
+
+.roles-box {
+  background-color: white; /* Box background color */
+  color: black; /* Text color */
+  padding: 2rem; /* Add padding inside the boxes */
+  border-radius: 8px; /* Rounded corners for the boxes */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  flex: 1; /* Make the boxes equal in width */
+  text-align: left; /* Align text to the left */
+}
+
+.roles-box ul {
+  list-style-type: disc; /* bullet point */
+  margin: 0;
+  padding-left: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.roles-header {
+  margin-bottom: 2em; /* Space below the header */
+  text-align: center; /* Center-align the header */
+}
+
+.roles-header h2 {
+  font-size: 2.5rem; /* Header font size */
+  font-weight: bold; /* Bold text */
+  text-decoration: underline; /* Underline the header */
+  color: black; /* Text color */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .roles-container {
+      flex-direction: column; /* Stack boxes vertically */
+      gap: 1.5rem; /* Adjust spacing between boxes */
+  }
+
+  .roles-box {
+      text-align: center; /* Center-align text on mobile */
+  }
+
+  .roles-box ul {
+      padding-left: 0; /* Remove left padding on mobile */
+  }
+}
+/* ROLES END */
+
+
+/* Telegram Section */
+.telegram-section {
+  background-color: #d3d3d3; /* Match with other sections */
+  padding: 4em 2em; /* Add padding around the section */
+  text-align: center; /* Center the header */
+}
+
+.telegram-header {
+  margin-bottom: 2em; /* Space below the header */
+}
+
+.telegram-header h2 {
+  font-size: 2.5rem; /* Same size as roles header */
+  font-weight: bold; /* Bold text */
+  text-decoration: underline; /* Underline the header */
+  color: black; /* Text color */
+}
+
+.telegram-content {
+  display: flex; /* Side-by-side layout */
+  justify-content: space-between; /* Add space between left and right halves */
+  align-items: center; /* Center vertically */
+  gap: 2rem; /* Space between the halves */
+  max-width: 1200px; /* Limit the width of the section */
+  margin: 0 auto; /* Center the content within the section */
+}
+
+.telegram-image {
+  flex: 1; /* Make the left half take equal width */
+  display: flex; /* Enable flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.telegram-image img {
+  width: 100%; /* Fit the container width */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 500px; /* Limit maximum width */
+  border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.telegram-description {
+  flex: 1; /* Make the right half take equal width */
+  text-align: left; /* Align text to the left */
+  font-size: 2rem; /* Adjust font size */
+  font-weight: bold;
+  line-height: 1.8; /* Add line spacing for readability */
+  color: black; /* Text color */
+  word-wrap: break-word; /* Ensure long words break correctly */
+  word-break: break-word; /* Ensure text wraps properly */
+  overflow-wrap: break-word; /* Handle text overflow */
+}
+
+.telegram-button-container {
+  margin-top: 2rem; /* Add spacing above the button */
+  text-align: center; /* Center the button horizontally */
+}
+
+.telegram-btn {
+  background-color: transparent;
+  color: black;
+  font-weight: bold;
+  letter-spacing: 2px;
+  border: 2px solid black;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.telegram-btn:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .telegram-content {
+      flex-direction: column; /* Stack vertically */
+      gap: 1.5rem; /* Adjust spacing between sections */
+  }
+
+  .telegram-image,
+  .telegram-description {
+      text-align: center; /* Center-align content for mobile */
+      width: 100%; /* Allow full width */
+  }
+
+  .telegram-description {
+      font-size: 0.9rem; /* Reduce font size for smaller screens */
+      line-height: 1.6; /* Adjust line height for readability */
+      padding: 0 1rem; /* Add padding to prevent edge overflow */
+  }
+}
+

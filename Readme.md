@@ -14,6 +14,8 @@ https://www.youtube.com/@TDevs
 https://www.youtube.com/@GlobalTechFix
 https://www.youtube.com/@coderookie4983
 https://www.youtube.com/@BroCodez
+https://www.youtube.com/@wearesales.community
+
 
 -- Media --
 https://celavi.com
@@ -26,4 +28,5 @@ https://fourwaves.com/
 https://logo.wine
 https://www.cleanpng.com/
 https://img.freepik.com
-https://www.youtube.com/@wearesales.community
+https://www.countryflags.com/
+https://t.me/SgJobPT

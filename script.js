@@ -112,4 +112,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     observer.observe(videoSection);
     // VIDEO END
+
+
+    // COUNTER ANIMATION START
+
+    const counters = document.querySelectorAll(".counter");
+    const animationDuration = 10000; // Total duration of the animation
+    const frameRate = 10; // Interval to update counter
+
+    counters.forEach((counter) => {
+        const target = +counter.getAttribute("data-target"); // Get target number
+        const totalFrames = animationDuration / frameRate;
+        const increment = target / totalFrames;
+
+        let current = 0; // Initialize counter value
+
+        const updateCounter = () => {
+            current += increment;
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current); // Update counter
+                setTimeout(updateCounter, frameRate);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        updateCounter(); // Start the counter animation
+    });
+
+    // COUNTER ANIMATION END
+    
 });
