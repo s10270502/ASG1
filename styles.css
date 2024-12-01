@@ -418,7 +418,7 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: gray;
+  background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -428,7 +428,7 @@ h1 {
   width: 80%;
   height: 80%;
   object-fit: cover;
-  border-radius: 50%;
+  border-radius: 30%;
 }
 
 .social-link {
@@ -814,11 +814,13 @@ h1 {
 .history-section {
   background-color: #333333; /* Dark gray background */
   color: white; /* White text */
-  padding: 4em 2em; /* Add padding around the section */
+  padding: 4em 5em; /* Add padding around the section */
+  display: grid;
+  gap: 5em;
 }
 
 .history-header {
-  margin-bottom: 7em; /* Original settings retained */
+  margin-bottom: 1em; /* Original settings retained */
   text-align: center; /* Center the heading */
   position: relative; /* Original settings retained */
 }
@@ -842,12 +844,11 @@ h1 {
   align-items: center; /* Center horizontally within the half */
   justify-content: center; /* Center vertically within the half */
   text-align: center; /* Center the text for description */
-  max-width: 50%; /* Limit each half to 50% of the content */
+  max-width: 30%; /* Limit each half to 50% of the content */
 }
 
 .history-image-placeholder {
   background-color: #b3b3b3; /* Placeholder background */
-  height: 500px; /* Fixed height */
 }
 
 .history-image-placeholder img {
@@ -965,15 +966,17 @@ h1 {
 }
 
 .counter-container {
-  display: flex; /* Use flexbox for layout */
+  display: flex; /* flexbox for layout */
   flex-direction: column; /* Stack counter and text vertically */
   align-items: center; /* Center-align counter and text */
 }
 
 .counter {
-  font-size: 10rem; /* Larger font size for counter values */
+  font-size: 10rem;
   font-weight: bold;
-  color: #ffffff; /* Dark text color for counters */
+  color: #ffffff;
+  text-decoration: underline;
+
 }
 
 .counter-text {
