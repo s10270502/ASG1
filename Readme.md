@@ -1,3 +1,5 @@
+
+
 This project is about my Front End Development (FED) Project as a Polytechnic year 1 student studying IT.
 The inspiration is from my side hustle as a events and F&B recruiter as I have hired close to 2000 part timers over a few years.
 
@@ -30,3 +32,6 @@ https://www.cleanpng.com/
 https://img.freepik.com
 https://www.countryflags.com/
 https://t.me/SgJobPT
+https://www.safenet.bg
+https://upload.wikimedia.org
+https://www.flaticon.com/
